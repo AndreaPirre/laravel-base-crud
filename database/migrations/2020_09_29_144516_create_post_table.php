@@ -16,9 +16,9 @@ class CreatePostTable extends Migration
         Schema::create('post', function (Blueprint $table) {
             $table->id();
 
-            $table -> string ('title', 64);
-            $table -> string('category', 64);
-            $table -> text('text');
+            $table -> string ('title', 64) -> nullable();
+            $table -> string('category', 64) -> nullable();
+            $table -> text('text') -> nullable();
             $table -> integer('like');
             $table -> integer('dislike');
 
